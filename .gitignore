@@ -4,6 +4,6 @@ __pycache__/
 .python-version
 .ipynb_checkpoints/
 .idea/
-data/**.csv
+data/**
 .config.yaml
 .temp_output.ipynb
