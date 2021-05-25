@@ -1,7 +1,10 @@
 # Personal RCT
 
 Run [randomised control trials](https://en.wikipedia.org/wiki/Randomized_controlled_trial) on yourself using data from your personal activity tracker
-(currently supports Fitbit).
+(currently supports Fitbit). Optionally make your findings publicly
+available, for example:
+
+* [The effect of magnesium supplementation on sleep quality: evidence from my fitbit](https://peterjrichens.github.io/personal-rct/magnesium_sleep_may_2021.html)
 
 ## Set up environment
 You will need to set up your development environment using conda, which you can install [directly](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) or via [pyenv](https://github.com/pyenv/pyenv). Then, ensure you have [GNU Make](https://www.gnu.org/software/make/) installed before running the following command:
@@ -37,4 +40,4 @@ Follow [instructions](https://help.fitbit.com/articles/en_US/Help_article/1133.h
 	make publish name=magnesium_sleep_may_2021
 	```
 	
-	This will generate html files under `docs/*.html`. Check-in the generated files to make them publicly accessible.
+	This will generate html files under `docs/*.html`. Check-in the generated files to make them publicly accessible via github pages.
