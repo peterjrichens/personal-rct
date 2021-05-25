@@ -5,5 +5,5 @@ __pycache__/
 .ipynb_checkpoints/
 .idea/
 data/**
-.config.yaml
-.temp_output.ipynb
+config.yaml
+temp_output.ipynb
