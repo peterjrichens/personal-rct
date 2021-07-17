@@ -32,11 +32,13 @@ def get_treatment_df(start_date, end_date, treatment_dict):
     experiment_end = df[df.treatment.notnull()].treatment_date.max()
     df = df[df.treatment_date <= experiment_end]
     baseline_end = df[df.treatment.isnull()].treatment_date.max()
-    assert baseline_end + timedelta(days=1) == experiment_start
+    assert (
+        baseline_end + timedelta(days=1) == experiment_start
+    ), f"{baseline_end} + {timedelta(days=1)} != {experiment_start}"
     df["experiment_active"] = df.treatment_date >= experiment_start
     assert df[df.experiment_active == True].treatment.notnull().all()
     assert df[df.experiment_active == False].treatment.isnull().all()
-    return df[["treatment_date", "experiment_active", "treatment"]]
+    return validate(df[["treatment_date", "experiment_active", "treatment"]])
 
 
 def add_day_of_week(df):
@@ -45,5 +47,7 @@ def add_day_of_week(df):
 
 
 def validate(df):
-    assert len(df) == df.treatment_date.nunique()
+    assert len(df) == df.treatment_date.nunique(), df[
+        df.duplicated(subset="treatment_date")
+    ]
     return df
