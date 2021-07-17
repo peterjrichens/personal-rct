@@ -5,6 +5,7 @@ Run [randomised control trials](https://en.wikipedia.org/wiki/Randomized_control
 available, for example:
 
 * [The effect of magnesium supplementation on sleep quality: evidence from my fitbit](https://peterjrichens.github.io/personal-rct/magnesium_sleep_may_2021.html)
+* [The effect of magnesium supplementation on sleep quality: phase II](https://peterjrichens.github.io/personal-rct/magnesium_sleep_july_2021.html)
 
 ## Set up environment
 You will need to set up your development environment using conda, which you can install [directly](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) or via [pyenv](https://github.com/pyenv/pyenv). Then, ensure you have [GNU Make](https://www.gnu.org/software/make/) installed before running the following command:
